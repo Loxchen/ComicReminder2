@@ -1,0 +1,27 @@
+<html>
+    <head>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+    </head>
+    <body>
+	{% for comicDetail in comicDetails %}
+	    <b>{{ comicDetail.name }}</b> :
+	    <b>{{ comicDetail.url }}</b>
+	    <p></p>
+	{% endfor %}
+	
+	<form action="/add" method="post">
+	    <table>
+		<tr>
+		    <th>Name</th>
+		    <th>Url</th>
+		</tr>
+		<tr>
+		    <td><input type="text" name="name" ></td>
+		    <td><input type="text" name="url" ></td>
+	    </table>
+	    <div><input type="submit" value="add comic">
+	</form>
+
+    </body>
+</html>    
+
